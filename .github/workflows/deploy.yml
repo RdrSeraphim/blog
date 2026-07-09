@@ -19,11 +19,13 @@ jobs:
       - name: checkout main
         uses: actions/checkout@v4
         with:
+          ref: main
           path: main-branch
 
       - name: checkout staging
         uses: actions/checkout@v4
         with:
+          ref: staging
           path: staging-branch
 
       - name: merge dirs
