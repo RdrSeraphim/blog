@@ -1,8 +1,9 @@
-baseURL   = "https://srp.life/"
-copyright = "© 2026 Rdr. Seraphim Pardee"
-locale    = "en-US"
-theme     = "github.com/rdrseraphim/srplife_theme/v3"
-title     = "Rdr. Seraphim Pardee"
+baseURL       = "https://srp.life/"
+copyright     = "© 2026 Rdr. Seraphim Pardee"
+enableGitInfo = true
+locale        = "en-US"
+theme         = "github.com/rdrseraphim/srplife_theme/v3"
+title         = "Rdr. Seraphim Pardee"
 
 [pagination]
 disableAliases = false
