@@ -1,7 +1,7 @@
 baseURL   = "https://srp.life/"
 copyright = "© 2026 Rdr. Seraphim Pardee"
 locale    = "en-US"
-#theme     = "srplife_theme"
+theme     = "github.com/rdrseraphim/srplife_theme/v3"
 title     = "Rdr. Seraphim Pardee"
 
 [pagination]
@@ -176,7 +176,3 @@ minifyOutput = false
         [server.headers.values]
         Access-Control-Allow-Origin          = '*'
         Access-Control-Allow-Private-Network = 'true'
-
-[module]
-  [[module.imports]]
-    path = "github.com/rdrseraphim/srplife_theme/v3"
