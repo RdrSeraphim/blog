@@ -75,7 +75,7 @@ profileImage = "images/me.jpg"
     loading          = "lazy"
     mapping          = "og:title"
     reactionsEnabled = "1"
-    repo             = "rdrseraphim/rdrseraphim.github.io"
+    repo             = "rdrseraphim/blog"
     repoId           = "R_kgDOTSvrTw"
 
     [params.webmention]
