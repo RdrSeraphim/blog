@@ -1,0 +1,59 @@
+/* Profile Window */
+.profile-photo {
+    width: 100%;
+    height: auto;
+    /* Inset Bevel */
+    border: 2px solid var(--cde-dark);
+    border-bottom-color: var(--cde-white);
+    border-right-color: var(--cde-white);
+    margin-bottom: 15px;
+    background-color: #ddd;
+    display: block;
+}
+
+.profile-name {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.profile-bio {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.profile-social {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    height: 24px;
+}
+
+.profile-social .si {
+    color: var(--cde-title-active);
+    fill: var(--cde-title-active);
+    stroke: var(--cde-title-active);
+    stroke-width: 0;
+}
+
+.profile-social li {
+    margin-right: 15px;
+}
+
+.profile-social a {
+    text-decoration: none;
+}
+
+.profile-git-info p {
+    font-size: 0.7rem;
+    padding-top: 20px;
+    margin-bottom: -10px;
+    text-align: center;
+    color: color-mix(in oklab, var(--cde-dark), white 20%);
+}
+
+.profile-git-info p a {
+    color: color-mix(in oklab, var(--cde-title-active), white 20%);
+}

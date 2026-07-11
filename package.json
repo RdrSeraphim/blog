@@ -4,8 +4,8 @@
     "demo": "https://srp.life",
     "version": "0.1.0",
     "scripts": {
-        "dev": "hugo server --port 8787 --buildDrafts --disableFastRender",
-        "build": "hugo --minify"
+        "dev": "hugo server --enableGitInfo --port 8787 --buildDrafts --disableFastRender",
+        "build": "hugo --enableGitInfo --minify"
     },
     "license": "UNLICENSED",
     "author": {
