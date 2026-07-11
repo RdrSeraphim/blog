@@ -24,12 +24,20 @@
         "autoprefixer": "^10.4.22",
         "cssnano": "^7.1.2",
         "lucide-static": "^1.24.0",
+        "node-addon-api": "^8.9.0",
+        "node-gyp": "^13.0.1",
         "postcss": "^8.5.6",
         "postcss-cli": "^11.0.1",
         "postcss-import": "^16.1.1",
         "postcss-nested": "^7.0.2",
         "prettier": "^3.9.5",
         "prettier-plugin-toml": "^2.0.6",
-        "simple-icons": "^12.4.0"
+        "simple-icons": "^12.4.0",
+        "wrangler": "^4.110.0"
+    },
+    "allowScripts": {
+        "esbuild@0.28.1": true,
+        "workerd@1.20260708.1": true,
+        "sharp@0.34.5": true
     }
 }
