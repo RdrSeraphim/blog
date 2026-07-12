@@ -13,12 +13,10 @@ I'm Rdr. Seraphim Pardee, born Elliott, Seraphim Dòmhnullach in Gaelic-speaking
 * email
     * personal: me@srp.life ([gpg](https://keys.openpgp.org/pks/lookup?op=get&amp;options=mr&amp;search=0x11FD4E775F8802ACD83B6DE5A2BC63FA0276FE65))
     * biblebot: srp@kerygma.digital
-* activitypub: [@srp@mastodon.au](https://mastodon.au/@srp)
-    * ~~you can also get posts from this blog by following [@blog@srp.life](https://mastodon.au/@blog@srp.life)~~  
-      this is currently out of action now that this is no longer using Ghost, i'll have to work out a new method for this
+* activitypub: [@srp@defcon.social](https://defcon.social/@srp)
+    * you can also get posts from this blog by following [@blog@srp.life](https://defcon.social/@blog@srp.life)
 * bluesky: [@srp.life](https://bsky.app/profile/srp.life)
-    * ~~similarly, you can get posts from this blog by following [@blog.srp.life.ap.brid.gy](https://bsky.app/profile/blog.srp.life.ap.brid.gy)~~  
-      similarly, this too is currently out of action
+    * similarly, you can get posts from this blog by following [@blog.srp.life.ap.brid.gy](https://bsky.app/profile/blog.srp.life.ap.brid.gy)
 * twitter/x: [@RdrSeraphim](https://x.com/RdrSeraphim)
 * github: [RdrSeraphim](https://github.com/RdrSeraphim)
 * gitlab[^1]: [RdrSeraphim](https://gitlab.com/RdrSeraphim)
