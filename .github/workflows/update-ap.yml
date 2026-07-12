@@ -1,0 +1,16 @@
+name: update-ap
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch: 
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: sync activitypub
+        run: |
+          curl -f -X POST "https://srp.life/api/sync-feed?feedUrl=https://srp.life/feed.xml" \
+            -u "${{ secrets.BRIDGE_USERNAME }}:${{ secrets.BRIDGE_PASSWORD }}"
+
