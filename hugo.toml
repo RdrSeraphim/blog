@@ -58,11 +58,10 @@ profileImage = "images/me.jpg"
     jobTitle        = "Reader (minor clergy), Software Engineer"
     nicknames       = ["srp", "xsrp", "SeraphimRP", "RdrSeraphim"]
     note            = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
-    photoURL        = "https://srp.life/images/me.jpg"
+    photoURL        = "/images/me.jpg"
     region          = "MI"
     regionFull      = "Michigan"
     sex             = "Male"
-    url             = "https://srp.life"
 
     [params.giscus]
     # Fill these in with your own Giscus configuration
