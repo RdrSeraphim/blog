@@ -62,7 +62,7 @@ profileImage = "images/me.jpg"
     region          = "MI"
     regionFull      = "Michigan"
     sex             = "Male"
-    urls            = ["acct:blog@srp.life", "acct:srp@defcon.social", "https://defcon.social/@srp"]
+    urls            = ["acct:blog@srp.life", "acct:srp@defcon.social", "https://defcon.social/@srp", "https://bsky.app/profile/srp.life", "https://x.com/RdrSeraphim", "https://github.com/RdrSeraphim", "https://gitlab.com/RdrSeraphim", "https://linkedin.com/in/srpx", "https://lobste.rs/u/srp", "https://news.ycombinator.com/user?id=xsrp", "https://en.wikipedia.org/wiki/User:Vypr"]
 
     [params.giscus]
     # Fill these in with your own Giscus configuration
