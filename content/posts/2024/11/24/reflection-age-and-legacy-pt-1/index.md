@@ -1,7 +1,7 @@
 ---
 date: 2024-11-24T04:02:48.000Z
 lastmod: 2025-09-23T03:12:09.000Z
-title: "Reflection: Age and Legacy (pt. 1)"
+title: "Reflection: Age & Legacy (pt. 1)"
 draft: false
 slug: reflection-age-and-legacy-pt-1
 t: ["Vocations","Spiritual Life","Writings","Reflection: Age & Legacy"]
