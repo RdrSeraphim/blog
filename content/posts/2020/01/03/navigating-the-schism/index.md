@@ -1,12 +1,12 @@
----
-date: 2020-01-03T00:01:49.000Z
-lastmod: 2025-09-23T03:13:10.000Z
-title: Navigating the Schism as a Layman
-draft: false
-slug: navigating-the-schism
-t: ["Writings","Orthodoxy"]
-summary: 'Understanding the Ukrainian situation in the Orthodox Church.'
----
++++
+date = 2020-01-03T00:01:49.000Z
+lastmod = 2025-09-23T03:13:10.000Z
+title = 'Navigating the Schism as a Layman'
+draft = false
+slug = 'navigating-the-schism'
+t = ['Writings', 'Orthodoxy']
+summary = 'Understanding the Ukrainian situation in the Orthodox Church.'
++++
 
 Christ is born!
 

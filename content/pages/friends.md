@@ -1,10 +1,10 @@
----
-date: 2026-07-16T23:58:23-04:00
-lastmod: 2026-07-16T23:58:23-04:00
-title: Friends
-draft: false
-slug: friends
----
++++
+date = 2026-07-16T23:58:23-04:00
+lastmod = 2026-07-16T23:58:23-04:00
+title = 'Friends'
+draft = false
+slug = 'friends'
++++
 
 Here's some of my friends and their blogs, in no particular order:
 

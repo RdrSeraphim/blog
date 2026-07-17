@@ -1,12 +1,12 @@
----
-date: 2024-02-26T19:40:43.000Z
-lastmod: 2025-09-23T03:12:18.000Z
-title: "The Hermitage: Thursday and Friday"
-draft: false
-slug: the-hermitage-thursday-and-friday
-t: ["Hermitage Trip 2024","Orthodoxy"]
-summary: 'This post concludes the series chronicling my week-long personal retreat at a local hermitage. Thank you for following along!'
----
++++
+date = 2024-02-26T19:40:43.000Z
+lastmod = 2025-09-23T03:12:18.000Z
+title = 'The Hermitage: Thursday and Friday'
+draft = false
+slug = 'the-hermitage-thursday-and-friday'
+t = ['Hermitage Trip 2024', 'Orthodoxy']
+summary = 'This post concludes the series chronicling my week-long personal retreat at a local hermitage. Thank you for following along!'
++++
 
 ### Day 5 - Thursday
 

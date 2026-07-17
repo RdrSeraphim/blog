@@ -1,13 +1,13 @@
----
-date: 2025-08-01T02:33:00.000Z
-lastmod: 2025-09-23T03:11:11.000Z
-title: A Grief Unobserved
-draft: false
-slug: a-grief-unobserved
-t: ["Writings","Vocations"]
-cover: https://images.unsplash.com/photo-1621463359611-dad1655c2696?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE5fHxydXNzaWFuJTIwY2VtZXRlcnl8ZW58MHx8fHwxNzUzNjY1MzIxfDA&ixlib=rb-4.1.0&q=80&w=2000
-summary: '"And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away." - Revelation 21:4 (KJV)'
----
++++
+date = 2025-08-01T02:33:00.000Z
+lastmod = 2025-09-23T03:11:11.000Z
+title = 'A Grief Unobserved'
+draft = false
+slug = 'a-grief-unobserved'
+t = ['Writings', 'Vocations']
+cover = 'https://images.unsplash.com/photo-1621463359611-dad1655c2696?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE5fHxydXNzaWFuJTIwY2VtZXRlcnl8ZW58MHx8fHwxNzUzNjY1MzIxfDA&ixlib=rb-4.1.0&q=80&w=2000'
+summary = '"And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away." - Revelation 21:4 (KJV)'
++++
 
 {{% yt jTJHEuH-RCE %}}Some mood-setting, if you'd like.{{% /yt %}}
 

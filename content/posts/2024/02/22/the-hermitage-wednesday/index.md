@@ -1,12 +1,12 @@
----
-date: 2024-02-22T09:51:37.000Z
-lastmod: 2025-09-23T03:12:22.000Z
-title: "The Hermitage: Wednesday"
-draft: false
-slug: the-hermitage-wednesday
-t: ["Hermitage Trip 2024","Orthodoxy"]
-summary: 'Bow down Thine ear, O Lord, and hearken unto me, for poor and needy am I. Preserve my soul, for I am holy; save Thy servant, O my God, that hopeth in Thee.'
----
++++
+date = 2024-02-22T09:51:37.000Z
+lastmod = 2025-09-23T03:12:22.000Z
+title = 'The Hermitage: Wednesday'
+draft = false
+slug = 'the-hermitage-wednesday'
+t = ['Hermitage Trip 2024', 'Orthodoxy']
+summary = 'Bow down Thine ear, O Lord, and hearken unto me, for poor and needy am I. Preserve my soul, for I am holy; save Thy servant, O my God, that hopeth in Thee.'
++++
 
 Good morning. There’s fog outside as it’s warmer today than yesterday. The snow is still on the ground but I don’t know how much of it will be left tomorrow. I’ve been trying to have a takeaway in every Matins. I have a couple, one that I am having trouble recalling and one that speaks to the former: inattentiveness as my sin. Lord willing, I recall the other.
 

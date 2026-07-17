@@ -1,13 +1,13 @@
----
-date: 2025-03-10T13:28:17.000Z
-lastmod: 2025-09-23T03:11:44.000Z
-title: Something of a revitalization.
-draft: false
-slug: something-of-a-revitalization
-t: ["Meta"]
-cover: https://images.unsplash.com/photo-1739370641449-0ae4ef182817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDU0fHxyZW5ld2FsfGVufDB8fHx8MTc0MTIzMjU1OHww&ixlib=rb-4.0.3&q=80&w=2000
-summary: "Friendship with Substack ended, now Ghost is my best friend."
----
++++
+date = 2025-03-10T13:28:17.000Z
+lastmod = 2025-09-23T03:11:44.000Z
+title = 'Something of a revitalization.'
+draft = false
+slug = 'something-of-a-revitalization'
+t = ['Meta']
+cover = 'https://images.unsplash.com/photo-1739370641449-0ae4ef182817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDU0fHxyZW5ld2FsfGVufDB8fHx8MTc0MTIzMjU1OHww&ixlib=rb-4.0.3&q=80&w=2000'
+summary = 'Friendship with Substack ended, now Ghost is my best friend.'
++++
 
 Hi there!
 

@@ -1,10 +1,10 @@
----
-date: 2024-08-10T01:33:45.000Z
-lastmod: 2025-03-05T23:02:06.000Z
-title: Resources
-draft: false
-slug: resources
----
++++
+date = 2024-08-10T01:33:45.000Z
+lastmod = 2025-03-05T23:02:06.000Z
+title = 'Resources'
+draft = false
+slug = 'resources'
++++
 
 Hello and welcome to my resources page! Here I've collected some various resources and placed them all together in hopes of helping you on your journey to theosis. Provided also is a introduction to Orthodoxy reading list that might help the newcomers looking for what the Church believes and what the Church is (including the history!) If there is anything you think should be on here, shoot me a message!
 

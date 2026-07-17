@@ -1,13 +1,13 @@
----
-date: 2024-08-13T16:26:00.000Z
-lastmod: 2025-09-23T03:12:14.000Z
-title: No, You Don't Need a Significant Other
-draft: false
-slug: no-you-dont-need-a-significant-other
-t: ["Vocations","Orthodoxy"]
-cover: /3ae0272f-da83-4342-9745-8b16af4a7143_1200x800-jpeg.jpg
-summary: '"To the unmarried and the widows I say that it is well for them to remain single as I do." - 1st Corinthians 7:8 (RSV)'
----
++++
+date = 2024-08-13T16:26:00.000Z
+lastmod = 2025-09-23T03:12:14.000Z
+title = "No, You Don't Need a Significant Other"
+draft = false
+slug = 'no-you-dont-need-a-significant-other'
+t = ['Vocations', 'Orthodoxy']
+cover = '/3ae0272f-da83-4342-9745-8b16af4a7143_1200x800-jpeg.jpg'
+summary = '"To the unmarried and the widows I say that it is well for them to remain single as I do." - 1st Corinthians 7:8 (RSV)'
++++
 
 > To the unmarried and the widows I say that it is well for them to remain single as I do.
 > 

@@ -1,12 +1,12 @@
----
-date: 2024-02-16T18:49:12.000Z
-lastmod: 2025-09-23T03:12:26.000Z
-title: "The Hermitage: Tuesday"
-draft: false
-slug: the-hermitage-tuesday
-t: ["Hermitage Trip 2024","Orthodoxy"]
-summary: 'Grace wielded not a two-edged sword, but one with three edges against the foe: a single blade forged in heaven and sharpened with threefold might, which ever fighteth for the one thrice-radiant Godhead.'
----
++++
+date = 2024-02-16T18:49:12.000Z
+lastmod = 2025-09-23T03:12:26.000Z
+title = 'The Hermitage: Tuesday'
+draft = false
+slug = 'the-hermitage-tuesday'
+t = ['Hermitage Trip 2024', 'Orthodoxy']
+summary = 'Grace wielded not a two-edged sword, but one with three edges against the foe: a single blade forged in heaven and sharpened with threefold might, which ever fighteth for the one thrice-radiant Godhead.'
++++
 
 It snowed! A lot! Apparently Fenton got nearly 5 inches, we’re a bit less it seems. I also slept without any leg cramps! Matins was good (did I mention I love matins?) but I found some of the verses today very good:
 
