@@ -4,21 +4,24 @@ The musings of an Orthodox Christian reader and software engineer.
 
 ## Authoring
 
-- **New posts/pages**: `hugo new posts/YYYY/MM/DD/slug/index.md` or `hugo new pages/slug.md`. The archetypes in `archetypes/` (`posts.md`, `pages.md`, and a `default.md` fallback for any other section) fill in front matter matching the fields already used across existing content — title-cased title, slug, date/lastmod, `draft: true`, and (for posts) empty `t`/`summary` placeholders.
+- **New posts/pages**: `hugo new posts/YYYY/MM/DD/slug/index.md` or `hugo new pages/slug.md`. The archetypes in `archetypes/` (`posts.md`, `pages.md`, and a `default.md` fallback for any other section) fill in TOML front matter matching the fields used across existing content — title-cased title, slug, date/lastmod, `draft = true`, and empty `summary` (plus `t` for posts) placeholders.
 - **Preview**: `npm run dev` (`hugo server --enableGitInfo --port 8787 --buildDrafts --disableFastRender`) for a full, live-reloading themed preview in the browser. For in-terminal rendering, use an editor plugin like [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)'s `:RenderMarkdown`.
-- **Footnotes and front matter cleanup**: see `cmd/blogcli` below.
+- **Footnotes, front matter, and linting**: see `cmd/blogcli` below.
+
+Front matter across the site is **TOML (`+++`)** — matching `hugo.toml` and Hugo's own defaults. (The bulk of the content originally arrived as YAML from a Ghost migration; `blogcli frontmatter` converted it.)
 
 ## blogcli
 
-`cmd/blogcli` handles the two bits of drafting that Hugo and editor plugins don't already cover:
+`cmd/blogcli` handles the authoring chores Hugo and editor plugins don't cover:
 
 ```sh
 go build -o bin/blogcli ./cmd/blogcli
-bin/blogcli footnotes [-w] <file>
-bin/blogcli frontmatter [-w] <file>
+bin/blogcli footnotes   [-w] <file>
+bin/blogcli frontmatter [-w] [--yaml] [<file|dir>...]
+bin/blogcli lint             [--strict] [<file|dir>...]
 ```
 
-Both print the result to stdout by default; pass `-w` to write it back to the file instead.
+`footnotes` and `frontmatter` print to stdout by default; pass `-w` to write back. With no path arguments, `frontmatter` and `lint` process every `.md` under `./content` (a directory is walked recursively).
 
 ### footnotes
 
@@ -41,12 +44,22 @@ Each marker becomes its own footnote, even if the text repeats. The one exceptio
 
 ### frontmatter
 
-For content that predates a proper archetype, or was hand-created with `hugo new` before `archetypes/posts.md`/`pages.md` existed (plain TOML `+++` front matter, missing `lastmod`, missing `slug`), `blogcli frontmatter -w <file>` brings it in line with the rest of the site:
+`blogcli frontmatter -w [path...]` normalizes content front matter to the site's conventions:
 
-- converts TOML (`+++`) front matter to this blog's YAML (`---`) style
+- re-serializes to canonical **TOML** (`--yaml` goes the other way, if the canonical format ever changes)
 - fills in a missing `lastmod` from `date`, and a missing `slug` from the file's path
 - for files under `content/posts/` or `content/pages/`, reorders fields to match the schema used across the rest of that section
 
-It never invents or drops a value beyond those two safe defaults, and leaves fields it doesn't recognize as they are. Already-clean files are a no-op.
+It never invents or drops a value beyond those two safe defaults — in particular it never fabricates a `summary` — and leaves fields it doesn't recognize as-is. Already-canonical files are a no-op.
 
-See [`RdrSeraphim/kickstart.nvim`](https://github.com/rdrseraphim/kickstart.nvim) for Neovim keymaps wired to both commands.
+### lint
+
+`blogcli lint [path...]` checks front matter without changing anything and reports issues per file. **Errors** (non-canonical format, unparseable front matter, a missing required field, an invalid date) exit non-zero; **warnings** (a missing/empty `summary`, so the meta description is uncurated; a `cover` without a `cover-alt`; a `slug` that doesn't match the file's path) are advisory unless you pass `--strict`.
+
+This runs in CI (`.github/workflows/lint-content.yml`) and is available as an opt-in pre-commit hook:
+
+```sh
+git config core.hooksPath .githooks
+```
+
+See [`RdrSeraphim/kickstart.nvim`](https://github.com/rdrseraphim/kickstart.nvim) for Neovim keymaps wired to these commands.

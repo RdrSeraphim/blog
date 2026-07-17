@@ -1,0 +1,17 @@
+#!/bin/sh
+# blogcli pre-commit hook: fails the commit if any content front matter has
+# lint errors (wrong format, missing required field, bad date, unparseable),
+# or if a staged post still has un-renumbered footnotes.
+#
+# Enable it once with:
+#   git config core.hooksPath .githooks
+#
+# Warnings (missing summary, cover without cover-alt) don't block a commit;
+# run `go run ./cmd/blogcli lint` any time to see them.
+
+set -e
+
+# Only run when content or the tool changed, so unrelated commits stay fast.
+if git diff --cached --name-only | grep -qE '^(content/|archetypes/|cmd/blogcli/|internal/)'; then
+    go run ./cmd/blogcli lint
+fi

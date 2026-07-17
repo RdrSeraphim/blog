@@ -2,6 +2,7 @@ package frontmatter
 
 import (
 	"errors"
+	"fmt"
 	"path/filepath"
 	"regexp"
 	"strings"
@@ -12,7 +13,7 @@ import (
 var ErrNoFrontMatter = errors.New("no front matter found")
 
 var postsFieldOrder = []string{"date", "lastmod", "title", "draft", "slug", "t", "cover", "cover-alt", "summary"}
-var pagesFieldOrder = []string{"date", "lastmod", "title", "draft", "slug"}
+var pagesFieldOrder = []string{"date", "lastmod", "title", "draft", "slug", "summary"}
 
 // sectionFieldOrder returns the canonical field order for a content file,
 // inferred from its path, or nil if it's not under a section this blog
@@ -61,35 +62,39 @@ type FixResult struct {
 	Changed bool
 }
 
-// Fix normalizes a content file's front matter: TOML (+++) blocks are
-// converted to this blog's YAML style, a missing "lastmod" is filled in
-// from "date", a missing "slug" is derived from the file's path, and -
-// for files under content/posts or content/pages, where this blog has an
-// established field schema - fields are reordered to match it. Fields
-// this blog has no opinion on (an unrecognized section, or extra keys
-// beyond the known schema) are left as they are, just carried over.
+// Fix normalizes a content file's front matter to the target format and
+// this blog's conventions: the front matter is re-serialized as target
+// (TOML or YAML), a missing "lastmod" is filled in from "date", a missing
+// "slug" is derived from the file's path, and - for files under
+// content/posts or content/pages, where this blog has an established field
+// schema - fields are reordered to match it. Fields this blog has no
+// opinion on (an unrecognized section, or extra keys beyond the known
+// schema) are carried over in place.
 //
 // It never invents or drops a value: only lastmod and slug get defaults,
-// and only when they're missing entirely.
-func Fix(path string, data []byte) (FixResult, error) {
-	raw, body, _, ok := SplitAny(data)
+// and only when they're missing entirely. A "summary" is never fabricated -
+// that's editorial - so a page or post without one keeps not having one
+// (blogcli lint reports it instead).
+func Fix(path string, data []byte, target Format) (FixResult, error) {
+	raw, body, srcTOML, ok := SplitAny(data)
 	if !ok {
 		return FixResult{}, ErrNoFrontMatter
 	}
+	src := FormatYAML
+	if srcTOML {
+		src = FormatTOML
+	}
+
 	fields, err := ParseFields(raw)
 	if err != nil {
 		return FixResult{}, err
 	}
 
-	byKey := make(map[string]string, len(fields))
+	byKey := make(map[string]Value, len(fields))
 	var original []string
 	for _, f := range fields {
-		byKey[f.Key] = f.Value
+		byKey[f.Key] = DecodeValue(f.Value, src)
 		original = append(original, f.Key)
-	}
-
-	for k, v := range byKey {
-		byKey[k] = Unquote(v)
 	}
 
 	var added []string
@@ -101,36 +106,48 @@ func Fix(path string, data []byte) (FixResult, error) {
 	}
 	if _, ok := byKey["slug"]; !ok {
 		if slug := inferSlug(path); slug != "" {
-			byKey["slug"] = slug
+			byKey["slug"] = Value{kind: kindString, str: slug}
 			added = append(added, "slug")
 		}
 	}
 
-	order := sectionFieldOrder(path)
-	var finalOrder []string
-	if order != nil {
-		known := make(map[string]bool, len(order))
-		for _, k := range order {
-			known[k] = true
-			if _, ok := byKey[k]; ok {
-				finalOrder = append(finalOrder, k)
-			}
-		}
-		for _, k := range original {
-			if !known[k] {
-				finalOrder = append(finalOrder, k)
-			}
-		}
-	} else {
-		finalOrder = append(finalOrder, original...)
-		finalOrder = append(finalOrder, added...)
-	}
+	finalOrder := orderFields(path, original, added, byKey)
 
-	var out []Field
+	var b strings.Builder
+	sep := ": "
+	if target == FormatTOML {
+		sep = " = "
+	}
 	for _, k := range finalOrder {
-		out = append(out, Field{Key: k, Value: byKey[k]})
+		fmt.Fprintf(&b, "%s%s%s\n", k, sep, byKey[k].Encode(target))
 	}
 
-	newBody := Join(RenderFields(out), body)
+	newBody := JoinFormat(b.String(), body, target)
 	return FixResult{Body: newBody, Changed: string(newBody) != string(data)}, nil
+}
+
+// orderFields decides the final key order: for a known section, canonical
+// schema order first (only for keys that are present), then any extra keys
+// in their original order; for an unknown section, original order with any
+// added defaults appended.
+func orderFields(path string, original, added []string, byKey map[string]Value) []string {
+	order := sectionFieldOrder(path)
+	if order == nil {
+		return append(append([]string{}, original...), added...)
+	}
+
+	var out []string
+	known := make(map[string]bool, len(order))
+	for _, k := range order {
+		known[k] = true
+		if _, ok := byKey[k]; ok {
+			out = append(out, k)
+		}
+	}
+	for _, k := range original {
+		if !known[k] {
+			out = append(out, k)
+		}
+	}
+	return out
 }

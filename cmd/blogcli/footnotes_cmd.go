@@ -50,7 +50,7 @@ untouched.
 		return err
 	}
 
-	fm, body, hasFM := frontmatter.Split(data)
+	fm, body, isTOML, hasFM := frontmatter.SplitAny(data)
 
 	res, err := footnotes.Renumber(body)
 	if err != nil {
@@ -67,7 +67,11 @@ untouched.
 
 	var out []byte
 	if hasFM {
-		out = frontmatter.Join(fm, res.Body)
+		format := frontmatter.FormatYAML
+		if isTOML {
+			format = frontmatter.FormatTOML
+		}
+		out = frontmatter.JoinFormat(fm, res.Body, format)
 	} else {
 		out = []byte(res.Body)
 	}

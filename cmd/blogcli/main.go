@@ -25,6 +25,8 @@ func main() {
 		err = runFootnotes(os.Args[2:])
 	case "frontmatter":
 		err = runFrontmatter(os.Args[2:])
+	case "lint":
+		err = runLint(os.Args[2:])
 	case "-h", "--help", "help":
 		usage()
 		return
@@ -44,8 +46,9 @@ func usage() {
 	fmt.Fprint(os.Stderr, `blogcli - authoring companion for this Hugo blog
 
 Usage:
-  blogcli footnotes [-w] <file>     renumber footnotes to [^1], [^2]...
-  blogcli frontmatter [-w] <file>   fix up a content file's front matter
+  blogcli footnotes [-w] <file>            renumber footnotes to [^1], [^2]...
+  blogcli frontmatter [-w] [<file|dir>...] normalize front matter (TOML)
+  blogcli lint [<file|dir>...]             report front matter problems
 
 Run 'blogcli <command> -h' for command-specific details.
 `)

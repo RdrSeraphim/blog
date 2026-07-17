@@ -1,7 +1,8 @@
----
-date: {{ .Date }}
-lastmod: {{ .Date }}
-title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-draft: true
-slug: {{ .File.ContentBaseName }}
----
++++
+date = {{ .Date }}
+lastmod = {{ .Date }}
+title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+draft = true
+slug = '{{ .File.ContentBaseName }}'
+summary = ''
++++
