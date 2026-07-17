@@ -1,5 +1,4 @@
-// Package footnotes renumbers hand-authored, mnemonic footnotes (e.g.
-// [^meow] or the inline shorthand [^meow: text]) into the sequential
+// Package footnotes renumbers hand-authored footnotes into the sequential
 // [^1], [^2], ... style used throughout the blog, collecting their
 // definitions into an endnote block at the bottom of the document.
 package footnotes
@@ -15,37 +14,50 @@ import (
 type Result struct {
 	Body    string   // the rewritten body (unchanged if nothing to do)
 	Changed bool     // whether Body differs from the input
-	Missing []string // labels referenced but never given definition text
+	Missing []string // legacy numeric references with no matching definition
 }
 
 var trailingDefRe = regexp.MustCompile(`^\[\^([^\]\s]+)\]:[ \t]?(.*)$`)
+var allDigits = regexp.MustCompile(`^[0-9]+$`)
 
-// Renumber rewrites all footnote references in body to sequential numeric
-// identifiers, in order of first appearance, and appends a clean endnote
-// block containing their definitions. It supports three ways of supplying
-// definition text, and they may be mixed freely within one document:
+// Renumber rewrites footnotes in body to sequential numeric identifiers, in
+// order of first appearance, and appends a clean endnote block containing
+// their definitions.
 //
-//   - inline shorthand at the point of use: [^label: definition text]
-//   - a bare reference [^label] paired with a line of the form
-//     "[^label]: definition text" anywhere else in the document (this is
-//     also how already-numbered posts like [^1] ... [^1]: ... are read
-//     back in, so re-running Renumber on an already-clean post is a no-op)
+// The bracket content of a footnote marker is its text, written right where
+// it's used:
 //
-// If any referenced label has no definition anywhere in the document, it
-// is left untouched in the body and reported in Missing; callers should
-// treat a non-empty Missing as reason not to write the result out.
+//	Point one.[^A cat sound.] Point two.[^A dog sound.]
+//
+// becomes:
+//
+//	Point one.[^1] Point two.[^2]
+//
+//	[^1]: A cat sound.
+//	[^2]: A dog sound.
+//
+// Each marker stands alone: identical text in two different markers still
+// produces two separate footnotes, never a shared one.
+//
+// The one exception is a marker whose content is purely numeric, e.g.
+// [^1] paired with a "[^1]: text" line elsewhere in the document. That's
+// read as an already-numbered reference rather than literal text "1", so
+// re-running Renumber on an already-clean, already-published post (which
+// uses exactly that numeric style) is a no-op, and multiple [^1] markers
+// referring to the same definition are recognized as the same footnote.
+//
+// A numeric marker with no matching definition is left untouched in the
+// body and reported in Missing; callers should treat a non-empty Missing
+// as reason not to write the result out.
 func Renumber(body string) (Result, error) {
 	content, trailingDefs := extractTrailingDefs(body)
-
-	defText := map[string]string{}
-	for label, text := range trailingDefs {
-		defText[label] = text
-	}
 
 	var out strings.Builder
 	order := []string{}
 	numOf := map[string]int{}
+	defText := map[string]string{}
 	missingSet := map[string]bool{}
+	occurrence := 0
 
 	i := 0
 	for i < len(content) {
@@ -57,58 +69,64 @@ func Renumber(body string) (Result, error) {
 		start += i
 		out.WriteString(content[i:start])
 
-		label, defTextInline, hasInlineDef, tokenEnd, isToken := scanToken(content, start)
+		text, numeric, tokenEnd, isToken := scanToken(content, start)
 		if !isToken {
 			out.WriteString("[^")
 			i = start + 2
 			continue
 		}
 
-		if hasInlineDef {
-			defText[label] = defTextInline
-		}
-
-		if _, seen := numOf[label]; !seen {
-			numOf[label] = len(order) + 1
-			order = append(order, label)
-		}
-
-		if _, ok := defText[label]; !ok {
-			missingSet[label] = true
-			// Leave the original token untouched so the document isn't
-			// silently corrupted; caller decides whether to abort.
-			out.WriteString(content[start:tokenEnd])
+		var key string
+		if numeric {
+			// Legacy numeric reference: dedup by the original number and
+			// resolve its text from the trailing definition block.
+			key = "n:" + text
+			if _, known := defText[key]; !known {
+				if t, found := trailingDefs[text]; found {
+					defText[key] = t
+				} else {
+					missingSet[text] = true
+					out.WriteString(content[start:tokenEnd])
+					i = tokenEnd
+					continue
+				}
+			}
 		} else {
-			fmt.Fprintf(&out, "[^%d]", numOf[label])
+			// The bracket content is the footnote's text, verbatim. Every
+			// occurrence is its own footnote, even if the text repeats.
+			occurrence++
+			key = fmt.Sprintf("c:%d", occurrence)
+			defText[key] = text
 		}
 
+		if _, seen := numOf[key]; !seen {
+			numOf[key] = len(order) + 1
+			order = append(order, key)
+		}
+		fmt.Fprintf(&out, "[^%d]", numOf[key])
 		i = tokenEnd
 	}
 
-	if len(order) == 0 && len(trailingDefs) == 0 {
-		return Result{Body: body, Changed: false}, nil
-	}
-
-	missing := make([]string, 0, len(missingSet))
-	for l := range missingSet {
-		missing = append(missing, l)
-	}
-	sort.Strings(missing)
-	if len(missing) > 0 {
+	if len(missingSet) > 0 {
+		missing := make([]string, 0, len(missingSet))
+		for l := range missingSet {
+			missing = append(missing, l)
+		}
+		sort.Strings(missing)
 		return Result{Body: body, Changed: false, Missing: missing}, nil
 	}
 
 	newBody := strings.TrimRight(out.String(), "\n") + "\n"
 	if len(order) > 0 {
 		var defs strings.Builder
-		for _, label := range order {
-			fmt.Fprintf(&defs, "[^%d]: %s\n", numOf[label], defText[label])
+		for _, key := range order {
+			fmt.Fprintf(&defs, "[^%d]: %s\n", numOf[key], defText[key])
 		}
 		newBody += "\n" + strings.TrimRight(defs.String(), "\n") + "\n"
 	}
 
 	changed := newBody != body
-	return Result{Body: newBody, Changed: changed, Missing: nil}, nil
+	return Result{Body: newBody, Changed: changed}, nil
 }
 
 // extractTrailingDefs strips a contiguous block of "[^label]: text" lines
@@ -147,54 +165,30 @@ func extractTrailingDefs(body string) (content string, defs map[string]string) {
 }
 
 // scanToken attempts to parse a footnote token starting at content[start]
-// (which must be "[^"). It returns the label, an inline definition if the
-// token used the "[^label: text]" shorthand, and the index just past the
-// token's closing bracket. isToken is false if content[start:] isn't a
-// well-formed footnote token, in which case only the leading "[^" should
-// be consumed by the caller.
-func scanToken(content string, start int) (label string, defText string, hasInlineDef bool, end int, isToken bool) {
+// (which must be "[^"), reading up to the balanced closing bracket so
+// footnote text may itself contain markdown links. It returns the bracket
+// content, whether that content is purely numeric, and the index just past
+// the closing bracket. isToken is false for an empty or unbalanced "[^...]",
+// in which case only the leading "[^" should be consumed by the caller.
+func scanToken(content string, start int) (text string, numeric bool, end int, isToken bool) {
 	i := start + 2
-	labelStart := i
-	for i < len(content) && isLabelChar(content[i]) {
+	textStart := i
+	depth := 1
+	for i < len(content) && depth > 0 {
+		switch content[i] {
+		case '[':
+			depth++
+		case ']':
+			depth--
+		}
+		if depth == 0 {
+			break
+		}
 		i++
 	}
-	if i == labelStart {
-		return "", "", false, 0, false
+	if depth != 0 || i == textStart {
+		return "", false, 0, false
 	}
-	label = content[labelStart:i]
-
-	if i < len(content) && content[i] == ']' {
-		return label, "", false, i + 1, true
-	}
-
-	if i < len(content) && content[i] == ':' {
-		i++
-		if i < len(content) && content[i] == ' ' {
-			i++
-		}
-		textStart := i
-		depth := 1
-		for i < len(content) && depth > 0 {
-			switch content[i] {
-			case '[':
-				depth++
-			case ']':
-				depth--
-			}
-			if depth == 0 {
-				break
-			}
-			i++
-		}
-		if depth != 0 {
-			return "", "", false, 0, false
-		}
-		return label, content[textStart:i], true, i + 1, true
-	}
-
-	return "", "", false, 0, false
-}
-
-func isLabelChar(b byte) bool {
-	return b >= 'a' && b <= 'z' || b >= 'A' && b <= 'Z' || b >= '0' && b <= '9' || b == '_' || b == '-'
+	text = content[textStart:i]
+	return text, allDigits.MatchString(text), i + 1, true
 }

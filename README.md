@@ -14,21 +14,22 @@ bin/blogcli footnotes [-w] <file>          # renumber mnemonic footnotes into [^
 bin/blogcli preview [--html] <file>        # preview in a terminal viewer, or a live-reloading browser page
 ```
 
-While drafting, write footnotes with an inline mnemonic label instead of tracking numbers by hand:
+While drafting, write a footnote's text directly in the marker instead of tracking numbers by hand:
 
 ```markdown
-Point one.[^meow: A cat sound.] Point two, mentioned again[^meow].
+Point one.[^A cat sound.] Point two.[^A dog sound.]
 ```
 
 `blogcli footnotes -w <file>` rewrites that to the numbered/endnote style used across this blog:
 
 ```markdown
-Point one.[^1] Point two, mentioned again[^1].
+Point one.[^1] Point two.[^2]
 
 [^1]: A cat sound.
+[^2]: A dog sound.
 ```
 
-A bare `[^label]` paired with a `[^label]: text` line elsewhere in the file works too, so running it on an already-numbered post is a no-op.
+Each marker becomes its own footnote, even if the text repeats. The one exception is a purely numeric marker like `[^1]` paired with a `[^1]: text` line elsewhere in the file — that's read as an already-numbered reference rather than literal text, so running this on an already-numbered post is a no-op.
 
 See `bin/blogcli <command> -h` for details, and [`RdrSeraphim/kickstart.nvim`](https://github.com/rdrseraphim/kickstart.nvim) for Neovim keymaps wired to this tool.
 

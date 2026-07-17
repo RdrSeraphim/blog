@@ -16,19 +16,21 @@ func runFootnotes(args []string) error {
 	fs.Usage = func() {
 		fmt.Fprint(os.Stderr, `Usage: blogcli footnotes [-w] <file>
 
-Renumbers mnemonic footnotes, e.g.:
+Renumbers footnotes written with their text right in the marker, e.g.:
 
-    Point one.[^meow: A cat sound.] Point two, mentioned again[^meow].
+    Point one.[^A cat sound.] Point two.[^A dog sound.]
 
 into the sequential style used across the blog:
 
-    Point one.[^1] Point two, mentioned again[^1].
+    Point one.[^1] Point two.[^2]
 
     [^1]: A cat sound.
+    [^2]: A dog sound.
 
-Bare references paired with a "[^label]: text" line elsewhere in the
-document work too, so re-running this on an already-numbered post is a
-no-op.
+A purely numeric marker like [^1] paired with a "[^1]: text" line
+elsewhere in the document is read as an already-numbered reference
+rather than literal text, so re-running this on an already-numbered
+post is a no-op.
 `)
 	}
 	if err := fs.Parse(args); err != nil {
@@ -52,8 +54,8 @@ no-op.
 		return err
 	}
 	if len(res.Missing) > 0 {
-		return fmt.Errorf("no definition found for: [^%s] (add a \"[^%s]: ...\" line, or use the [^%s: text] inline shorthand)",
-			strings.Join(res.Missing, "], [^"), res.Missing[0], res.Missing[0])
+		return fmt.Errorf("no definition found for numeric reference(s) [^%s] (add a \"[^%s]: ...\" line, or replace it with the note text directly, e.g. [^the note text])",
+			strings.Join(res.Missing, "], [^"), res.Missing[0])
 	}
 	if !res.Changed {
 		fmt.Fprintln(os.Stderr, "no footnote changes needed")
