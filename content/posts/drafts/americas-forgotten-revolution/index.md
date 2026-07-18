@@ -1,12 +1,12 @@
----
-date: 1970-01-01T00:00:00.000Z
-lastmod: 2026-04-02T04:37:45.000Z
-title: America's Forgotten Revolution
-draft: true
-slug: americas-forgotten-revolution
-cover: /service-pnp-ppmsca-83200-83220v.jpg
-summary: 'How a societal spiritual crisis ushered in a postmodern faith.'
----
++++
+date = 1970-01-01T00:00:00.000Z
+lastmod = 2026-04-02T04:37:45.000Z
+title = "America's Forgotten Revolution"
+draft = true
+slug = 'americas-forgotten-revolution'
+cover = '/service-pnp-ppmsca-83200-83220v.jpg'
+summary = 'How a societal spiritual crisis ushered in a postmodern faith.'
++++
 
 ℹ️
 

@@ -1,12 +1,12 @@
----
-date: 2024-02-14T13:35:36.000Z
-lastmod: 2025-09-23T03:12:31.000Z
-title: "The Hermitage: Monday"
-draft: false
-slug: the-hermitage-monday
-t: ["Hermitage Trip 2024","Orthodoxy"]
-summary: "Y'ever been stuck with some monks in a random U-Haul center in Ohio?"
----
++++
+date = 2024-02-14T13:35:36.000Z
+lastmod = 2025-09-23T03:12:31.000Z
+title = 'The Hermitage: Monday'
+draft = false
+slug = 'the-hermitage-monday'
+t = ['Hermitage Trip 2024', 'Orthodoxy']
+summary = "Y'ever been stuck with some monks in a random U-Haul center in Ohio?"
++++
 
 I woke up to my alarm. I slept less but the quality was apparently better. I didn’t wake up from tossing and turning as much, although since being here I’ve had leg cramps every night. I’m not sure if there is a purpose to them or why they’re happening more so than usual.
 

@@ -1,13 +1,13 @@
----
-date: 2024-11-28T01:48:49.000Z
-lastmod: 2025-09-23T03:12:00.000Z
-title: "Reflection: Age & Legacy (pt. 3)"
-draft: false
-slug: reflection-age-and-legacy-pt-3
-t: ["Vocations","Spiritual Life","Writings","Reflection: Age & Legacy"]
-cover: /c6ac2fcc-d85d-4349-918d-7db8915d3c4d_1920x1475-jpeg-2.jpg
-summary: '"Indeed all was vanity and grasping for the wind. There was no profit under the sun." - Ecclesiastes 2:11b'
----
++++
+date = 2024-11-28T01:48:49.000Z
+lastmod = 2025-09-23T03:12:00.000Z
+title = 'Reflection: Age & Legacy (pt. 3)'
+draft = false
+slug = 'reflection-age-and-legacy-pt-3'
+t = ['Vocations', 'Spiritual Life', 'Writings', 'Reflection: Age & Legacy']
+cover = '/c6ac2fcc-d85d-4349-918d-7db8915d3c4d_1920x1475-jpeg-2.jpg'
+summary = '"Indeed all was vanity and grasping for the wind. There was no profit under the sun." - Ecclesiastes 2:11b'
++++
 
 {{% callout emoji="💡" %}} This is the third and final entry of [a series of introspective posts](/t/reflection-age-legacy/) intended as a primarily therapeutic endeavor. Given the intent to initially provide one cohesive article, these subsequent entries are continuations of thought in the previous entries.{{% /callout %}}
 

@@ -1,0 +1,30 @@
+name: lint-content
+
+on:
+  push:
+    paths:
+      - 'content/**'
+      - 'archetypes/**'
+      - 'cmd/blogcli/**'
+      - 'internal/**'
+      - '.github/workflows/lint-content.yml'
+  pull_request:
+    paths:
+      - 'content/**'
+      - 'archetypes/**'
+      - 'cmd/blogcli/**'
+      - 'internal/**'
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: blogcli tests
+        run: go test ./...
+      - name: lint content front matter
+        run: go run ./cmd/blogcli lint

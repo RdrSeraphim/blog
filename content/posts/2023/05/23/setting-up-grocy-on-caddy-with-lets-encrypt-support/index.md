@@ -1,13 +1,13 @@
----
-date: 2023-05-23T17:10:24.000Z
-lastmod: 2025-09-23T03:05:44.000Z
-title: Setting up Grocy on Caddy with Let's Encrypt Support
-draft: false
-slug: setting-up-grocy-on-caddy-with-lets-encrypt-support
-t: ["Self-Hosting"]
-cover: /2dc686e5-4e6b-40c1-b6a0-7929e2cd6abc_1024x682.png
-summary: "My wife loves organization and asked for a system to manage grocery inventory management. As the husband sysadmin, it is my sworn duty to oblige (after all, it's lots of fun!)."
----
++++
+date = 2023-05-23T17:10:24.000Z
+lastmod = 2025-09-23T03:05:44.000Z
+title = "Setting up Grocy on Caddy with Let's Encrypt Support"
+draft = false
+slug = 'setting-up-grocy-on-caddy-with-lets-encrypt-support'
+t = ['Self-Hosting']
+cover = '/2dc686e5-4e6b-40c1-b6a0-7929e2cd6abc_1024x682.png'
+summary = "My wife loves organization and asked for a system to manage grocery inventory management. As the husband sysadmin, it is my sworn duty to oblige (after all, it's lots of fun!)."
++++
 
 My wife loves organization and asked for a system to manage grocery inventory management. As the husband sysadmin, it is my sworn duty to oblige (after all, it's lots of fun!). However, I learned there's no Grocy setup guides with Caddy. This guide seeks to help those who were in my shoes and be quite reproducible.
 

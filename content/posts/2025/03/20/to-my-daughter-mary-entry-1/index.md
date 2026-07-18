@@ -1,13 +1,13 @@
----
-date: 2025-03-20T04:00:00.000Z
-lastmod: 2025-09-23T03:11:28.000Z
-title: To My Daughter, Mary - Entry 1
-draft: false
-slug: to-my-daughter-mary-entry-1
-t: ["Writings","To My Daughter, Mary"]
-cover: /buildabear--1-.jpg
-summary: "On the occasion of your first birthday."
----
++++
+date = 2025-03-20T04:00:00.000Z
+lastmod = 2025-09-23T03:11:28.000Z
+title = 'To My Daughter, Mary - Entry 1'
+draft = false
+slug = 'to-my-daughter-mary-entry-1'
+t = ['Writings', 'To My Daughter, Mary']
+cover = '/buildabear--1-.jpg'
+summary = 'On the occasion of your first birthday.'
++++
 
 You've made it — one whole revolution around the sun.
 
