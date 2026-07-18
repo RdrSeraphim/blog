@@ -1,12 +1,12 @@
----
-date: 2021-11-11T16:01:48.000Z
-lastmod: 2025-09-23T03:13:06.000Z
-title: A Preface
-draft: false
-slug: a-preface
-t: ["Writings","Books"]
-summary: 'Now if only I had the attention span to actually write a book...'
----
++++
+date = 2021-11-11T16:01:48.000Z
+lastmod = 2025-09-23T03:13:06.000Z
+title = 'A Preface'
+draft = false
+slug = 'a-preface'
+t = ['Writings', 'Books']
+summary = 'Now if only I had the attention span to actually write a book...'
++++
 
 A couple months ago, I had an idea to write a book on the dirty laundry that us Orthodox Christians have lingering around - mostly in part to vent my concerns on paper. I don't know if I'll ever get started on it, whether it will even see fruition, but I thought it'd be worth sharing the preface I had written for it.
 

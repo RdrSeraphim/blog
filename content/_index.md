@@ -1,4 +1,5 @@
----
-type: home
-cover: /images/me.jpg
----
++++
+type = 'home'
+cover = '/images/me.jpg'
++++
+

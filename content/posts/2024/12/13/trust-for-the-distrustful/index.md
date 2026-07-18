@@ -1,13 +1,13 @@
----
-date: 2024-12-13T22:55:04.000Z
-lastmod: 2025-09-23T03:11:54.000Z
-title: Trust For The Distrustful
-draft: false
-slug: trust-for-the-distrustful
-t: ["Spiritual Life","Writings"]
-cover: /981770f4-d5ab-4fdf-85c8-ead6dc8d3748_1280x832-jpeg-1-1.jpg
-summary: '"For we have not a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are, yet without sin." - Hebrews 4:15 (RSV)'
----
++++
+date = 2024-12-13T22:55:04.000Z
+lastmod = 2025-09-23T03:11:54.000Z
+title = 'Trust For The Distrustful'
+draft = false
+slug = 'trust-for-the-distrustful'
+t = ['Spiritual Life', 'Writings']
+cover = '/981770f4-d5ab-4fdf-85c8-ead6dc8d3748_1280x832-jpeg-1-1.jpg'
+summary = '"For we have not a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are, yet without sin." - Hebrews 4:15 (RSV)'
++++
 
 Trust is a fickle thing.
 

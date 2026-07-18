@@ -1,12 +1,12 @@
----
-date: 2015-06-19T00:01:53.000Z
-lastmod: 2025-09-23T03:13:21.000Z
-title: Dropping Out
-draft: false
-slug: dropping-out
-t: ["Writings"]
-summary: 'On January 28th, I made a pretty big life-changing decision.'
----
++++
+date = 2015-06-19T00:01:53.000Z
+lastmod = 2025-09-23T03:13:21.000Z
+title = 'Dropping Out'
+draft = false
+slug = 'dropping-out'
+t = ['Writings']
+summary = 'On January 28th, I made a pretty big life-changing decision.'
++++
 
 I decided to drop out.
 

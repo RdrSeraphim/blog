@@ -1,7 +1,8 @@
 +++
-date = '2026-07-16T23:58:23-04:00'
-draft = false
+date = 2026-07-16T23:58:23-04:00
+lastmod = 2026-07-16T23:58:23-04:00
 title = 'Friends'
+draft = false
 slug = 'friends'
 +++
 

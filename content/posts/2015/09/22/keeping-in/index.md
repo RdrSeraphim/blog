@@ -1,12 +1,12 @@
----
-date: 2015-09-22T00:01:39.000Z
-lastmod: 2025-09-23T03:13:17.000Z
-title: Keeping In
-draft: false
-slug: keeping-in
-t: ["Writings"]
-summary: 'You know... like the opposite of dropping out.'
----
++++
+date = 2015-09-22T00:01:39.000Z
+lastmod = 2025-09-23T03:13:17.000Z
+title = 'Keeping In'
+draft = false
+slug = 'keeping-in'
+t = ['Writings']
+summary = 'You know... like the opposite of dropping out.'
++++
 
 It's been a long 3 months since I've updated on all this education stuff. When I wrote the post, I had reached my low point and I wasn't sure where I was headed afterwards.
 

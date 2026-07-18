@@ -1,10 +1,10 @@
----
-date: 2025-03-05T20:49:24.000Z
-lastmod: 2026-06-14T20:12:46.000Z
-title: About
-draft: false
-slug: about
----
++++
+date = 2025-03-05T20:49:24.000Z
+lastmod = 2026-06-14T20:12:46.000Z
+title = 'About'
+draft = false
+slug = 'about'
++++
 
 I'm Rdr. Seraphim Pardee, born Elliott, Seraphim Dòmhnullach in Gaelic-speaking contexts. I'm 27 and live in Grand Blanc, Michigan with my wife, Anna. I'm a software engineer for [iA](https://iarx.com/), a pharmacy automation company.
 

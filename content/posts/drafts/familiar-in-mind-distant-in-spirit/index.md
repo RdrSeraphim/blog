@@ -1,13 +1,13 @@
----
-date: 1970-01-01T00:00:00.000Z
-lastmod: 2025-05-02T01:42:49.000Z
-title: Familiar in Mind, Distant in Spirit
-draft: true
-slug: familiar-in-mind-distant-in-spirit
-t: ["Writings","Spiritual Life"]
-cover: https://images.unsplash.com/photo-1539269230167-a73879bbec48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDd8fG1ldGVvcmF8ZW58MHx8fHwxNzQ2MTQ2NTQ3fDA&ixlib=rb-4.0.3&q=80&w=2000
-summary: '"It is not an enemy who taunts me—then I could bear it; it is not an adversary who deals insolently with me—then I could hide from him. But it is you, my equal, my companion, my familiar friend." - Psalm 55:12-13 (RSV)'
----
++++
+date = 1970-01-01T00:00:00.000Z
+lastmod = 2025-05-02T01:42:49.000Z
+title = 'Familiar in Mind, Distant in Spirit'
+draft = true
+slug = 'familiar-in-mind-distant-in-spirit'
+t = ['Writings', 'Spiritual Life']
+cover = 'https://images.unsplash.com/photo-1539269230167-a73879bbec48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDd8fG1ldGVvcmF8ZW58MHx8fHwxNzQ2MTQ2NTQ3fDA&ixlib=rb-4.0.3&q=80&w=2000'
+summary = '"It is not an enemy who taunts me—then I could bear it; it is not an adversary who deals insolently with me—then I could hide from him. But it is you, my equal, my companion, my familiar friend." - Psalm 55:12-13 (RSV)'
++++
 
 💭
 
