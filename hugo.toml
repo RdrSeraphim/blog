@@ -31,11 +31,11 @@ profileImage = "images/me.jpg"
         order = 1
         pack  = "lucide"
         url   = "mailto:me@srp.life"
-        [params.social_links.discord]
-        icon  = "discord"
+        [params.social_links.mastodon]
+        icon  = "mastodon"
         order = 2
         pack  = "simpleicons"
-        url   = "https://discord.com/users/186046294286925824"
+        url   = "https://defcon.social/@srp"
         [params.social_links.github]
         icon  = "github"
         order = 3
