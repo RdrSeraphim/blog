@@ -2,7 +2,7 @@ baseURL       = "https://srp.life/"
 copyright     = "© 2026 Rdr. Seraphim Pardee"
 enableGitInfo = true
 locale        = "en-US"
-theme         = "github.com/rdrseraphim/srplife_theme/v3"
+theme         = "github.com/rdrseraphim/srplife_theme/v4"
 title         = "Rdr. Seraphim Pardee"
 
 [pagination]
