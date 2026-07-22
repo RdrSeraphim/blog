@@ -2,7 +2,7 @@ baseURL       = "https://srp.life/"
 copyright     = "© 2026 Rdr. Seraphim Pardee"
 enableGitInfo = true
 locale        = "en-US"
-theme         = "github.com/rdrseraphim/srplife_theme/v3"
+theme         = "github.com/rdrseraphim/srplife_theme/v4"
 title         = "Rdr. Seraphim Pardee"
 
 [pagination]
@@ -19,6 +19,7 @@ path           = 'page'
 [params]
 author       = "Rdr. Seraphim Pardee"
 bio          = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
+contentRepo  = "https://github.com/rdrseraphim/blog"
 description  = "The musings of an Orthodox Christian reader and software engineer."
 profileImage = "images/me.jpg"
 
@@ -30,11 +31,11 @@ profileImage = "images/me.jpg"
         order = 1
         pack  = "lucide"
         url   = "mailto:me@srp.life"
-        [params.social_links.discord]
-        icon  = "discord"
+        [params.social_links.mastodon]
+        icon  = "mastodon"
         order = 2
         pack  = "simpleicons"
-        url   = "https://discord.com/users/186046294286925824"
+        url   = "https://defcon.social/@srp"
         [params.social_links.github]
         icon  = "github"
         order = 3
@@ -47,22 +48,34 @@ profileImage = "images/me.jpg"
         url   = "https://www.linkedin.com/in/srpx"
 
     [params.indieweb]
-    additionalName  = "R."
-    birthday        = "1998-08-25"
-    country         = "United States of America"
-    emails          = ["me@srp.life", "srp@kerygma.digital"]
-    familyName      = "Pardee"
-    fullName        = "Rdr. Seraphim Pardee"
-    givenName       = "Seraphim"
+    additionalName = "R."
+    birthday = "1998-08-25"
+    country = "United States of America"
+    emails = ["me@srp.life", "srp@kerygma.digital"]
+    familyName = "Pardee"
+    fullName = "Rdr. Seraphim Pardee"
+    givenName = "Seraphim"
     honorificPrefix = "Rdr."
-    jobTitle        = "Reader (minor clergy), Software Engineer"
-    nicknames       = ["srp", "xsrp", "SeraphimRP", "RdrSeraphim"]
-    note            = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
-    photoURL        = "/images/me.jpg"
-    region          = "MI"
-    regionFull      = "Michigan"
-    sex             = "Male"
-    urls            = ["acct:blog@srp.life", "acct:srp@defcon.social", "https://defcon.social/@srp", "https://bsky.app/profile/srp.life", "https://x.com/RdrSeraphim", "https://github.com/RdrSeraphim", "https://gitlab.com/RdrSeraphim", "https://linkedin.com/in/srpx", "https://lobste.rs/u/srp", "https://news.ycombinator.com/user?id=xsrp", "https://en.wikipedia.org/wiki/User:Vypr"]
+    jobTitle = "Reader (minor clergy), Software Engineer"
+    nicknames = ["srp", "xsrp", "SeraphimRP", "RdrSeraphim"]
+    note = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
+    photoURL = "/images/me.jpg"
+    region = "MI"
+    regionFull = "Michigan"
+    sex = "Male"
+    urls = [
+        "acct:blog@srp.life",
+        "acct:srp@defcon.social",
+        "https://defcon.social/@srp",
+        "https://bsky.app/profile/srp.life",
+        "https://x.com/RdrSeraphim",
+        "https://github.com/RdrSeraphim",
+        "https://gitlab.com/RdrSeraphim",
+        "https://linkedin.com/in/srpx",
+        "https://lobste.rs/u/srp",
+        "https://news.ycombinator.com/user?id=xsrp",
+        "https://en.wikipedia.org/wiki/User:Vypr",
+    ]
 
     [params.giscus]
     # Fill these in with your own Giscus configuration
@@ -93,8 +106,8 @@ url    = "/about/"
 weight = 2
 
 [[menus.main]]
-name = "Friends"
-url = "/friends/"
+name   = "Friends"
+url    = "/friends/"
 weight = 3
 
 [[menus.main]]
