@@ -16,10 +16,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout blog repository
         uses: actions/checkout@v4
 
-      - name: Checkout blogcli
+      - name: Checkout blogcli repository
         uses: actions/checkout@v4
         with:
           repository: RdrSeraphim/blogcli
@@ -30,5 +30,9 @@ jobs:
         with:
           go-version-file: go.mod
 
-      - name: lint content front matter
-        run: go run ./blogcli lint
+      - name: Install blogcli
+        run: go install .
+        working-directory: blogcli
+
+      - name: Lint content front matter
+        run: blogcli lint
