@@ -7,11 +7,15 @@
 #   git config core.hooksPath .githooks
 #
 # Warnings (missing summary, cover without cover-alt) don't block a commit;
-# run `go run ./cmd/blogcli lint` any time to see them.
+# run `blogcli lint` any time to see them.
 
 set -e
 
-# Only run when content or the tool changed, so unrelated commits stay fast.
-if git diff --cached --name-only | grep -qE '^(content/|archetypes/|cmd/blogcli/|internal/)'; then
-    go run ./cmd/blogcli lint
+# Only run when content changed, so unrelated commits stay fast.
+if git diff --cached --name-only | grep -qE '^(content/|archetypes/)'; then
+    if command -v blogcli >/dev/null 2>&1; then
+        blogcli lint
+    else
+        go run github.com/RdrSeraphim/blogcli@latest lint
+    fi
 fi
