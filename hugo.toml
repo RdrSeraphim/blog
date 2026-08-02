@@ -18,7 +18,7 @@ path           = 'page'
 
 [params]
 author       = "Rdr. Seraphim Pardee"
-bio          = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
+bio          = "I'm a {{< wikiref \"reader\" >}}reader{{< /wikiref >}} in the {{< wikiref \"oca\" >}}Orthodox Church in America{{< /wikiref >}}, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
 contentRepo  = "https://github.com/rdrseraphim/blog"
 description  = "The musings of an Orthodox Christian reader and software engineer."
 profileImage = "images/me.jpg"
@@ -59,7 +59,7 @@ profileImage = "images/me.jpg"
     jobTitle = "Reader (minor clergy), Software Engineer"
     nicknames = ["srp", "xsrp", "SeraphimRP", "RdrSeraphim"]
     note = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
-    photoURL = "/images/me.jpg"
+    photoURL = "https://srp.life/images/me.jpg"
     region = "MI"
     regionFull = "Michigan"
     sex = "Male"
@@ -106,21 +106,28 @@ url    = "/about/"
 weight = 2
 
 [[menus.main]]
+name   = "Wiki"
+url    = "/wiki/"
+weight = 3
+
+[[menus.main]]
 name   = "Friends"
 url    = "/friends/"
-weight = 3
+weight = 4
 
 [[menus.main]]
 name   = "Resources"
 url    = "/resources/"
-weight = 4
+weight = 5
 
 [taxonomies]
 tag = "t"
+category = "category"
 
 [permalinks]
 pages = "/:slug/"
 posts = "/:slug/"
+category = "/wiki/category/:slug/"
 
 [markup]
     [markup.highlight]
