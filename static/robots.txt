@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: 
+Disallow: /wiki
+Disallow: /ap
+Sitemap: https://srp.life/sitemap.xml
