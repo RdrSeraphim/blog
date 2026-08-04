@@ -4,7 +4,7 @@ lastmod = 2025-09-23T03:13:06.000Z
 title = 'A Preface'
 draft = false
 slug = 'a-preface'
-t = ['Writings', 'Books']
+t = ['Random Musings']
 summary = 'Now if only I had the attention span to actually write a book...'
 +++
 

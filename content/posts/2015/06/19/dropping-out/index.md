@@ -4,7 +4,7 @@ lastmod = 2025-09-23T03:13:21.000Z
 title = 'Dropping Out'
 draft = false
 slug = 'dropping-out'
-t = ['Writings']
+t = ['Vocations']
 summary = 'On January 28th, I made a pretty big life-changing decision.'
 +++
 

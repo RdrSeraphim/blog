@@ -4,7 +4,7 @@ lastmod = 2025-09-23T03:13:17.000Z
 title = 'Keeping In'
 draft = false
 slug = 'keeping-in'
-t = ['Writings']
+t = ['Vocations']
 summary = 'You know... like the opposite of dropping out.'
 +++
 

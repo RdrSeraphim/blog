@@ -4,7 +4,7 @@ lastmod = 2025-09-23T03:12:00.000Z
 title = 'Reflection: Age & Legacy (pt. 3)'
 draft = false
 slug = 'reflection-age-and-legacy-pt-3'
-t = ['Vocations', 'Spiritual Life', 'Writings', 'Reflection: Age & Legacy']
+t = ['Vocations', 'Spiritual Life', 'Reflection: Age & Legacy']
 cover = '/c6ac2fcc-d85d-4349-918d-7db8915d3c4d_1920x1475-jpeg-2.jpg'
 summary = '"Indeed all was vanity and grasping for the wind. There was no profit under the sun." - Ecclesiastes 2:11b'
 +++

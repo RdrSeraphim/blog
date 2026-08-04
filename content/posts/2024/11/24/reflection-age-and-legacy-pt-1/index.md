@@ -4,7 +4,7 @@ lastmod = 2025-09-23T03:12:09.000Z
 title = 'Reflection: Age & Legacy (pt. 1)'
 draft = false
 slug = 'reflection-age-and-legacy-pt-1'
-t = ['Vocations', 'Spiritual Life', 'Writings', 'Reflection: Age & Legacy']
+t = ['Vocations', 'Spiritual Life', 'Reflection: Age & Legacy']
 cover = '/dd7e2fba-7205-4f0d-8293-d97824cb452a_1280x853-jpeg-1.jpg'
 summary = '"To everything there is a season, a time for every purpose under heaven: a time to keep, and a time to throw away;" - Ecclesiastes 3:1, 6 (NKJV)'
 +++

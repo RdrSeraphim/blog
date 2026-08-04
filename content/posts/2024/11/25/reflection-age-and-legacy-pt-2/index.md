@@ -4,7 +4,7 @@ lastmod = 2025-09-23T03:12:05.000Z
 title = 'Reflection: Age & Legacy (pt. 2)'
 draft = false
 slug = 'reflection-age-and-legacy-pt-2'
-t = ['Vocations', 'Spiritual Life', 'Writings', 'Reflection: Age & Legacy']
+t = ['Vocations', 'Spiritual Life', 'Reflection: Age & Legacy']
 cover = '/3b7bd1aa-70a2-4e49-ae7b-71fa119fb0b0_1920x1280-jpeg-1.jpg'
 summary = '"Better to go to the house of mourning than to go to the house of feasting, for that is the end of all men; and the living will take it to heart." - Ecclesiastes 7:2'
 +++
