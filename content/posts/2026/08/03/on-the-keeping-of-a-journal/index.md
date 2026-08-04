@@ -63,7 +63,7 @@ Let your journaling materials be what feels right. Of course, maybe don't be ext
 
 I also put a lot of value into finding a pen that feels right. I'm a heavy-handed writer and the last pen I really enjoyed was the [Paper Mate InkJoy 700RT](https://www.papermate.com/pens/ballpoint-pens/paper-mate-inkjoy-700rt-retractable-ballpoint-pens-medium-point-1.0mm/SAP_1945911.html) back in high school. The link suggests that PM seems to still make these, but I haven't seen them stocked anywhere since they "revamped" (or, alternatively, "enshittified") the InkJoy line in the late 2010s. I've trialed a bunch of different pens from the Dr. Grip line to the Parker Jotter XL to my most recent preference of a Pilot Precise V7 refill in a Pilot G2 Limited body, but so far I've mostly settled with the Uni Jetstream RT. My hand still cramps when using it, but it's been the best so far in terms of writing feel and keeping a coherent visual aesthetic with the notebook itself. I might try the Alpha Gel grip variant and see where it gets me.
 
-My point being, writing is only as fun as it feels - so make sure you got materials that are conducive to you writing. Don't let bad pens or less preferable notebooks get in the way of actually writing, but consider being modest too.
+My point being: writing is only as fun as it feels - so make sure you got materials that are conducive to you writing. Don't let bad pens or less preferable notebooks get in the way of actually writing, but consider being modest too.
 
 ---
 
