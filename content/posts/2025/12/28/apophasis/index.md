@@ -4,9 +4,9 @@ lastmod = 2026-01-06T07:29:43.000Z
 title = 'Apophasis'
 draft = false
 slug = 'apophasis'
-t = ['Writings', 'Spiritual Life']
+t = ['Spiritual Life']
 cover = 'https://images.unsplash.com/photo-1716468070566-fb672541e43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDUwfHx0ZW5zaW9ufGVufDB8fHx8MTc2NjcyNzM0NXww&ixlib=rb-4.1.0&q=80&w=2000'
-cover-alt = 'Photo by [Coralie](https://unsplash.com/@zenphotos) / [Unsplash](https://unsplash.com/)'
+cover_alt = 'Photo by [Coralie](https://unsplash.com/@zenphotos) / [Unsplash](https://unsplash.com/)'
 summary = '"For the moment all discipline seems painful rather than pleasant; later it yields the peaceful fruit of righteousness to those who have been trained by it." - Hebrews 12:11 (RSV)'
 +++
 

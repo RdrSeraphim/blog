@@ -4,7 +4,7 @@ lastmod = 2025-09-23T03:13:13.000Z
 title = 'Just a Memory'
 draft = false
 slug = 'just-a-memory'
-t = ['Writings']
+t = ['Random Musings']
 summary = 'Kept around for the heck of it.'
 +++
 

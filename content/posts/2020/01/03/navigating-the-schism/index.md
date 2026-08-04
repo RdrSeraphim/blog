@@ -4,7 +4,7 @@ lastmod = 2025-09-23T03:13:10.000Z
 title = 'Navigating the Schism as a Layman'
 draft = false
 slug = 'navigating-the-schism'
-t = ['Writings', 'Orthodoxy']
+t = ['Spiritual Life']
 summary = 'Understanding the Ukrainian situation in the Orthodox Church.'
 +++
 
