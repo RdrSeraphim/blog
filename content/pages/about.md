@@ -70,6 +70,7 @@ My primary project is [BibleBot](https://biblebot.xyz) ([GitLab](https://gitlab.
 #### Side projects
 
 * rlshim ([github](https://github.com/RdrSeraphim/rlshim)), a lightweight, native shim for launching RuneLite on Linux with Jagex Accounts
+* ssg-ap-bridge ([github](https://github.com/RdrSeraphim/ssg-ap-bridge)), a bridge for your statically generated blog and ActivityPub, using your own domain
 * canon_law ([github](https://github.com/RdrSeraphim/canon_law)), a web service for referencing Orthodox canon law. It is not yet finished but most that is lacking is the rest of the content.
 * goarch_api ([github](https://github.com/RdrSeraphim/goarch_api)), a Python interface for the Greek Orthodox Archdiocese of America's public-facing (but not publicly documented) Chapel API.
 
