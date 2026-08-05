@@ -65,7 +65,7 @@ You might find more on [Keyoxide](https://keyoxide.org/11FD4E775F8802ACD83B6DE5A
 
 These are my projects outside of employment, with various levels of importance.
 
-My primary project is [BibleBot](https://biblebot.xyz) ([GitLab](https://gitlab.com/kerygmadigital/biblebot/biblebot)), a Discord bot for referencing the Bible and other Christian resources. It serves over 90,000 servers with a combined audience of over 9 million users. I've founded a non-profit around the project, [Kerygma Digital](https://kerygma.digital), that seeks to provide this and similar open-source services.
+My primary project is [BibleBot](https://biblebot.xyz) ([GitLab](https://gitlab.com/kerygmadigital/biblebot/biblebot)), a Discord bot for referencing the Bible and other Christian resources. It serves over 90,000 servers with a combined audience of over 9 million users. I've founded a nonprofit around the project, [Kerygma Digital](https://kerygma.digital), that seeks to provide this and similar open-source services.
 
 #### Side projects
 
