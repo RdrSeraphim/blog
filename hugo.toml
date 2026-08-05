@@ -121,13 +121,13 @@ url    = "/resources/"
 weight = 5
 
 [taxonomies]
-tag = "t"
 category = "category"
+tag      = "t"
 
 [permalinks]
-pages = "/:slug/"
-posts = "/:slug/"
 category = "/wiki/category/:slug/"
+pages    = "/:slug/"
+posts    = "/:slug/"
 
 [markup]
     [markup.highlight]

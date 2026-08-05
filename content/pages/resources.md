@@ -6,9 +6,9 @@ draft = false
 slug = 'resources'
 +++
 
-Hello and welcome to my resources page! Here I've collected some various resources and placed them all together in hopes of helping you on your journey to theosis. Provided also is a introduction to Orthodoxy reading list that might help the newcomers looking for what the Church believes and what the Church is (including the history!) If there is anything you think should be on here, shoot me a message!
+Hello and welcome to my resources page! Here I've collected some various resources and placed them all together in hopes of helping you on your journey to theosis. Provided also is an introduction to Orthodoxy reading list that might help the newcomers looking for what the Church believes and what the Church is (including the history!) If there is anything you think should be on here, shoot me a message!
 
-Note: This page is quite out of date. For example, it doesn’t take into account Ancient Faith Ministries ceasing blog hosting, amongst other things.
+Note: This page is quite out-of-date. For example, it doesn’t take into account Ancient Faith Ministries ceasing blog hosting, amongst other things.
 
 ### Fr. Thomas Hopko's † 55 Maxims
 
@@ -77,7 +77,7 @@ Note: This page is quite out of date. For example, it doesn’t take into accoun
 (This list goes from basic to intermediate.)
 
 - **The Orthodox Church **by Metropolitan Kallistos Ware (you may need to use his secular name, Timothy Ware)
-- **The Orthodox Faith (Vol. 1-4)** by Fr. Thomas Hopko †
+- **The Orthodox Faith (Vol. 1–4)** by Fr. Thomas Hopko †
 - **The Orthodox Way** by Metropolitan Kallistos Ware
 - **The Law of God** by Fr. Seraphim Slobodskoy (this is legally free online)
 - **For the Life of the World: Sacraments and Orthodoxy** by Fr. Alexander Schmemann †
@@ -124,6 +124,6 @@ Note: This page is quite out of date. For example, it doesn’t take into accoun
 
 - [Orthodox Church](https://www.youtube.com/channel/UCvV_LZGJbXjSN2Jx31YYF1Q) - various Orthodox-related videos, typically services, hymns, or events (note: it is not an official channel for any church)
 - [Y2AM](https://www.youtube.com/user/y2am) - The Greek Archdiocese of America's Youth and Young Adult Ministries channel. While pointed to youth and young adults (obv.), the videos are great for everyone of all ages.
-- [Bible Illustrated](https://www.youtube.com/channel/UC4VktB44EEkmQV8DymZVGtQ) - A wonderful small YouTube channel that reads the Bible and talks about chants, theology, and bad puns by Reader Bojan Teodosijevic.
+- [Bible Illustrated](https://www.youtube.com/channel/UC4VktB44EEkmQV8DymZVGtQ) - A wonderful small YouTube channel that reads the Bible and talks about chants, theology, and bad puns by Reader Bojan Teodosijević.
 
 † - May their memory be eternal.
