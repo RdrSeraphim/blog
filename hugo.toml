@@ -18,7 +18,7 @@ path           = 'page'
 
 [params]
 author       = "Rdr. Seraphim Pardee"
-bio          = "I'm a {{< wikiref \"reader\" >}}reader{{< /wikiref >}} in the {{< wikiref \"oca\" >}}Orthodox Church in America{{< /wikiref >}}, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
+bio          = "I'm a {{< wikiref \"reader\" >}}reader{{< /wikiref >}} in the {{< wikiref \"oca\" >}}Orthodox Church in America{{< /wikiref >}}, specializing in rubrics and choir ministry (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
 contentRepo  = "https://github.com/rdrseraphim/blog"
 description  = "The musings of an Orthodox Christian reader and software engineer."
 profileImage = "images/me.jpg"
@@ -58,7 +58,7 @@ profileImage = "images/me.jpg"
     honorificPrefix = "Rdr."
     jobTitle = "Reader (minor clergy), Software Engineer"
     nicknames = ["srp", "xsrp", "SeraphimRP", "RdrSeraphim"]
-    note = "I'm a reader in the Orthodox Church in America, specializing in choir and choir accessories (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
+    note = "I'm a reader in the Orthodox Church in America, specializing in rubrics and choir ministry (countertenor). I live in the world as a software engineer. Blessed to be a husband and dad of two."
     photoURL = "https://srp.life/images/me.jpg"
     region = "MI"
     regionFull = "Michigan"
