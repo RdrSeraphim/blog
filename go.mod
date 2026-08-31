@@ -2,4 +2,4 @@ module github.com/rdrseraphim/blog
 
 go 1.26.5
 
-require github.com/rdrseraphim/srplife_theme/v4 v4.1.8 // indirect
+require github.com/rdrseraphim/srplife_theme/v4 v4.1.12 // indirect
